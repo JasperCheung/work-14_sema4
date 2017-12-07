@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/sem.h>
+#include <string.h>
+#include <errno.h>
+#include <sys/shm.h>
+#include <sys/ipc.h>
+#include <sys/types.h>
+#define KEY 1069;
+
+int main( int argc, char ** argv ) {
+  
+  //CREATOOOOR!
+  int sem_eyedee;
+  //didn't put correct syntax "-c N"
+  
+  if(! strcmp( argv[1], "-c")){
+    sem_eyedee = semget(KEY, 1, IPC_CREAT | IPC_EXCL | 0666);
+    if(sem_eyedee == -1) printf("dude, it already exists!\n");
+  }
+  else{
+    int size;
+    printf("%d\n", (int) argv[2]);
+    printf("SEMID %d\n",semget(KEY, 1, IPC_CREAT| 0666);
+	   
+	   
+	   
+	   
+
+	   
+	 
+	 
+    
+	  
+  
+
